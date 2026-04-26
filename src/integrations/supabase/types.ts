@@ -14,7 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      certificates: {
+        Row: {
+          created_at: string
+          hash: string
+          id: string
+          kegiatan: string
+          nama: string
+          tanggal: string
+        }
+        Insert: {
+          created_at?: string
+          hash: string
+          id?: string
+          kegiatan: string
+          nama: string
+          tanggal: string
+        }
+        Update: {
+          created_at?: string
+          hash?: string
+          id?: string
+          kegiatan?: string
+          nama?: string
+          tanggal?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
